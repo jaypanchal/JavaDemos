@@ -1,8 +1,5 @@
 package com.demo.classes;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-
 class MyThread extends Thread{
 	public void run(){
 		System.out.println("Shutdown hook task completed.");
