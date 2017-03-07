@@ -15,6 +15,7 @@ public class DeadlockExample {
 					try {
 						Thread.sleep(100);
 					} catch (Exception e) {
+						e.printStackTrace();
 					}
 
 					synchronized (resource2) {
@@ -33,6 +34,7 @@ public class DeadlockExample {
 					try {
 						Thread.sleep(100);
 					} catch (Exception e) {
+						e.printStackTrace();
 					}
 
 					synchronized (resource1) {
