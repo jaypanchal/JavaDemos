@@ -8,13 +8,13 @@ import java.io.Serializable;
 
 class Student implements Serializable {
 
-	int id;
 	String name;
+	int id;
+	
+	public Student(String name,int id) {		
 
-	public Student(int id, String name) {
-
-		this.id = id;
 		this.name = name;
+		this.id = id;
 	}
 
 }
@@ -32,7 +32,7 @@ public class SerializableDemo {
 	}
 
 	public void perfromSerialization() {
-		Student student = new Student(10, "Test");
+		Student student = new Student("Test", 10);
 
 		try {
 
@@ -62,6 +62,8 @@ public class SerializableDemo {
 			Student student = (Student)objectInputStream.readObject();
 			
 			System.out.println("ID : " + student.id +", Name : " + student.name);
+			
+			objectInputStream.close();
 						
 		}catch(Exception exception){
 			System.out.println(exception);
